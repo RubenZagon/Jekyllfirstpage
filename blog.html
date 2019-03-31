@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+---
+<h1>Últimas publicaciones</h1>
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt }}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<!-- post.url Jekyll establece automáticamente la ruta de salida de la publicación-->
+<!-- post.title Extrae el nombre del archivo de la publicación y se puede anular configurando el título de enfrente-->
+<!-- post.excerpt Coge el primer parrafo del contenido por defecto -->
